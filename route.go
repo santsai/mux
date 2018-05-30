@@ -437,6 +437,12 @@ func (r *Route) Schemes(schemes ...string) *Route {
 	return r.addMatcher(schemeMatcher(schemes))
 }
 
+// BuildScheme sets the buildScheme
+func (r *Route) BuildScheme(scheme string) *Route {
+	r.buildScheme = scheme
+	return r
+}
+
 // BuildVarsFunc --------------------------------------------------------------
 
 // BuildVarsFunc is the function signature used by custom build variable
